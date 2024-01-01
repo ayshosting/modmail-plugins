@@ -17,10 +17,10 @@ class Patreon(commands.Cog):
 	def __init__(self, bot):
  		self.bot = bot
 
-   @commands.command()
-   @checks.thread_only()
-   @checks.has_permissions(PermissionLevel.SUPPORTER)
-   async def ptag(self, ctx, *, tier: str=None):
+	@commands.command()
+	@checks.thread_only()
+	@checks.has_permissions(PermissionLevel.SUPPORTER)
+	async def ptag(self, ctx, *, tier: str=None):
 	   """Tag the thread"""
 	   if tier is None:
 		   return await ctx.send("Not possible")
