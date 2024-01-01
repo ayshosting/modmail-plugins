@@ -21,7 +21,6 @@ class Patreon(commands.Cog):
 	@checks.thread_only()
 	@checks.has_permissions(PermissionLevel.SUPPORTER)
 	async def ptag(self, ctx, *, tier: str=None):
-        """Tag the thread"""
         if tier is None:
             return await ctx.send("Not possible")
         tier = tier.lower()
